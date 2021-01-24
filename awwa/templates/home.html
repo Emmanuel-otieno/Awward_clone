@@ -1,0 +1,47 @@
+{% extends "base.html" %} 
+{% block content %} 
+{{block.super}}
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active" ></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Coding and programming</h5>
+        <p>A programmer never sleeps</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev"  href="#carouselExampleCaptions"  role="button"data-slide="prev" >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a  class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next" >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<br />
+<h2 class="text-center">Check out below</h2>
+<div class="container">
+  <div class="row">
+    {% for project in projects %}
+    <div class="col-md-4">
+      <div class="card mb-3" style="width: 18rem">
+        <h5 class="card-title">{{ project.title }}</h5>
+        <img src="{{ project.image.url }}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <p class="card-text">{{ project.description }}</p>
+          <p class="card-text">{{ project.date }}</p>
+        </div>
+        <div class="card-body">
+          <a href="{{ project.link }}" class="card-link">View site</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock%}
