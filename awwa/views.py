@@ -6,8 +6,6 @@ def home(request):
 
     return render(request, 'home.html' , {'projects':projects})
 
-def about(request):
-     return render(request, 'about.html',)
 
 
 @login_required(login_url='/accounts/login/')
