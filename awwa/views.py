@@ -5,7 +5,7 @@ from .forms import NewProjectForm
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 def home(request):
-    projects = project.objects.all()
+    projects = Project.objects.all()
 
     return render(request, 'home.html' , {'projects':projects})
 
