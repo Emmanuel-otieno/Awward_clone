@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'tinymce',
     'user',
     'awwa',
+    'crispy_forms',
     'bootstrap4',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'awward.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [r'/home/moringa/Desktop/Awward/awwa/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
