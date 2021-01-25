@@ -1,0 +1,25 @@
+{% extends "aww/base.html" %} 
+{% block content %} 
+{{block.super}}
+
+<h2 class="text-center">Projects</h2>
+<div class="container">
+  <div class="row">
+    {% for project in projects %}
+    <div class="col-md-4">
+      <div class="card mb-3" style="width: 18rem">
+        <h5 class="card-title">{{ project.title }}</h5>
+        <img src="{{ project.image.url }}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <p class="card-text">{{ project.description }}</p>
+          <p class="card-text">{{ project.date }}</p>
+        </div>
+        <div class="card-body">
+          <a href="{{ project.link }}" class="card-link">View site</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock%}
