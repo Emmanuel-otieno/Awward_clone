@@ -20,6 +20,9 @@ You need to have install:
 * project-`django-admin startproject project_name .`
 * pillow helps in uploading images - `pip install pillow`
 
+##sample
+*Home page
+![Screenshot from 2021-01-25 16-29-28](https://user-images.githubusercontent.com/70565900/105801570-71027e80-5faa-11eb-9ab8-8e17a8ce2d19.png)
 
 
 ## Known Bugs
